@@ -13,7 +13,7 @@ _[marciusbezerra@gmail.com](mailto:marciusbezerra@gmail.com)_
 sudo nano /etc/systemd/system/temp-alert.service
 ```
 
-### Arquivo tem-alert.service
+### Arquivo temp-alert.service
 
 ```text
 [Unit]
@@ -36,7 +36,7 @@ sudo systemctl start temp-alert.service
 systemctl status temp-alert.service
 ```
 
-## verificando os logs
+## Verificando os logs
 
 ```bash
 tail -f temp-alert.log 
