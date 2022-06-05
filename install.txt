@@ -1,0 +1,17 @@
+$ sudo vi /etc/systemd/system/temp-alert.service
+
+> [Unit]
+> Description=Temperature Alert Shutdown!! (Marcius)
+>
+> [Service]
+> WorkingDirectory=/home/ubuntu/Projetos/temp-alert
+> ExecStart=/usr/bin/python3 /home/ubuntu/Projetos/temp-alert/temp-alert.py
+> Restart=always
+>
+> [Install]
+> WantedBy=multi-user.target
+
+$ rm temp-alert.log
+$ systemctl enable temp-alert.service
+$ systemctl start temp-alert.service
+$ cat temp-alert.log
